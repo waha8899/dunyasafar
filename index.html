@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>यात्रा ब्लॉग</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    direction: ltr;
+    background: #f5f5f5;
+}
+
+/* Header */
+header {
+    background: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470') no-repeat center/cover;
+    height: 80vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 50px;
+}
+
+header p {
+    font-size: 20px;
+}
+
+/* Navigation */
+nav {
+    background: #222;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Sections */
+.section {
+    padding: 40px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 10px;
+}
+
+.card p {
+    padding: 0 10px 10px;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <div>
+        <h1>यात्रा ब्लॉग</h1>
+        <p>यात्रा टिप्स और सस्ती यात्राओं के साथ दुनिया खोजें</p>
+    </div>
+</header>
+
+<nav>
+    <a href="#">होम</a>
+    <a href="#">यात्रा टिप्स</a>
+    <a href="#">गंतव्य</a>
+    <a href="#">बजट यात्रा</a>
+</nav>
+
+<!-- Travel Tips -->
+<section class="section">
+    <h2>✈️ यात्रा टिप्स</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff">
+            <h3>सस्ते टिकट कैसे बुक करें</h3>
+            <p>कम कीमत में फ्लाइट टिकट पाने के तरीके जानें।</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd">
+            <h3>सामान कैसे पैक करें</h3>
+            <p>यात्रा के लिए जरूरी चीज़ों की सूची।</p>
+        </div>
+    </div>
+</section>
+
+<!-- Destinations -->
+<section class="section">
+    <h2>🌍 गंतव्य प्रकार के अनुसार</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34">
+            <h3>रोमांटिक स्थान</h3>
+            <p>पेरिस और मालदीव जैसे बेहतरीन स्थान।</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+            <h3>समुद्री स्थान</h3>
+            <p>दुनिया के खूबसूरत समुद्र तटों का आनंद लें।</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e">
+            <h3>एडवेंचर ट्रिप</h3>
+            <p>रोमांच और प्रकृति के प्रेमियों के लिए जगहें।</p>
+        </div>
+    </div>
+</section>
+
+<!-- Budget Travel -->
+<section class="section">
+    <h2>💰 बजट यात्रा</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828">
+            <h3>कम बजट में यात्रा</h3>
+            <p>कम खर्च में यात्रा करने के टिप्स।</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+            <h3>सस्ते देश</h3>
+            <p>कम लागत वाले खूबसूरत देश।</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 यात्रा ब्लॉग - सभी अधिकार सुरक्षित</p>
+</footer>
+
+</body>
+</html>
