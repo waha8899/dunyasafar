@@ -9,7 +9,6 @@
 body {
     margin: 0;
     font-family: Arial;
-    direction: ltr;
     background: #f5f5f5;
 }
 
@@ -24,15 +23,7 @@ header {
     text-align: center;
 }
 
-header h1 {
-    font-size: 50px;
-}
-
-header p {
-    font-size: 20px;
-}
-
-/* Navigation */
+/* Navbar */
 nav {
     background: #222;
     padding: 10px;
@@ -43,7 +34,6 @@ nav a {
     color: white;
     margin: 10px;
     text-decoration: none;
-    font-size: 18px;
 }
 
 /* Sections */
@@ -52,6 +42,7 @@ nav a {
     text-align: center;
 }
 
+/* Cards */
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -65,6 +56,7 @@ nav a {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
 }
 
 .card img {
@@ -73,12 +65,15 @@ nav a {
     object-fit: cover;
 }
 
-.card h3 {
-    margin: 10px;
-}
-
-.card p {
-    padding: 0 10px 10px;
+/* Hidden Content */
+.details {
+    display: none;
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 700px;
+    border-radius: 10px;
+    text-align: right;
 }
 
 /* Footer */
@@ -89,6 +84,17 @@ footer {
     padding: 20px;
 }
 </style>
+
+<script>
+function toggleContent(id) {
+    var el = document.getElementById(id);
+    if (el.style.display === "block") {
+        el.style.display = "none";
+    } else {
+        el.style.display = "block";
+    }
+}
+</script>
 
 </head>
 
@@ -111,65 +117,78 @@ footer {
 <!-- Travel Tips -->
 <section class="section">
     <h2>✈️ यात्रा टिप्स</h2>
+
     <div class="cards">
-        <div class="card">
+        <div class="card" onclick="toggleContent('tip1')">
             <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff">
-            <h3>सस्ते टिकट कैसे बुक करें</h3>
-            <p>कम कीमत में फ्लाइट टिकट पाने के तरीके जानें।</p>
+            <h3>सस्ते टिकट</h3>
         </div>
 
-        <div class="card">
+        <div class="card" onclick="toggleContent('tip2')">
             <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd">
-            <h3>सामान कैसे पैक करें</h3>
-            <p>यात्रा के लिए जरूरी चीज़ों की सूची।</p>
+            <h3>पैकिंग</h3>
         </div>
     </div>
+
+    <div id="tip1" class="details">
+        <h3>सस्ते फ्लाइट टिकट कैसे बुक करें</h3>
+        <p>
+        हमेशा 2-3 महीने पहले टिकट बुक करें। अलग-अलग वेबसाइट पर कीमत चेक करें।
+        वीकडेज़ में फ्लाइट सस्ती होती है।
+        </p>
+    </div>
+
+    <div id="tip2" class="details">
+        <h3>सामान कैसे पैक करें</h3>
+        <p>
+        हल्का सामान रखें, कपड़ों को रोल करें और जरूरी चीजें ही लें।
+        </p>
+    </div>
+
 </section>
 
 <!-- Destinations -->
 <section class="section">
-    <h2>🌍 गंतव्य प्रकार के अनुसार</h2>
+    <h2>🌍 गंतव्य</h2>
+
     <div class="cards">
-        <div class="card">
+        <div class="card" onclick="toggleContent('des1')">
             <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34">
-            <h3>रोमांटिक स्थान</h3>
-            <p>पेरिस और मालदीव जैसे बेहतरीन स्थान।</p>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
-            <h3>समुद्री स्थान</h3>
-            <p>दुनिया के खूबसूरत समुद्र तटों का आनंद लें।</p>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e">
-            <h3>एडवेंचर ट्रिप</h3>
-            <p>रोमांच और प्रकृति के प्रेमियों के लिए जगहें।</p>
+            <h3>रोमांटिक</h3>
         </div>
     </div>
+
+    <div id="des1" class="details">
+        <h3>रोमांटिक गंतव्य</h3>
+        <p>
+        पेरिस, मालदीव और स्विट्जरलैंड कपल्स के लिए सबसे अच्छे स्थान हैं।
+        </p>
+    </div>
+
 </section>
 
-<!-- Budget Travel -->
+<!-- Budget -->
 <section class="section">
     <h2>💰 बजट यात्रा</h2>
-    <div class="cards">
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828">
-            <h3>कम बजट में यात्रा</h3>
-            <p>कम खर्च में यात्रा करने के टिप्स।</p>
-        </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
-            <h3>सस्ते देश</h3>
-            <p>कम लागत वाले खूबसूरत देश।</p>
+    <div class="cards">
+        <div class="card" onclick="toggleContent('bud1')">
+            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828">
+            <h3>कम बजट</h3>
         </div>
     </div>
+
+    <div id="bud1" class="details">
+        <h3>कम बजट में यात्रा</h3>
+        <p>
+        होस्टल में रहें, लोकल खाना खाएं और सार्वजनिक परिवहन का उपयोग करें।
+        </p>
+    </div>
+
 </section>
 
 <footer>
-    <p>© 2026 यात्रा ब्लॉग - सभी अधिकार सुरक्षित</p>
+    <p>© 2026 यात्रा ब्लॉग</p>
 </footer>
 
 </body>
